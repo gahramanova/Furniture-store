@@ -1,0 +1,30 @@
+.section1 {
+    background-color: #F3F3F3;
+}
+.section2{
+    background-color: #FBFAF7;
+}
+header .form-control {
+    width: 600px;
+    border-radius: 30px;
+}
+header .text-end .btn{
+    border-radius: 30px;
+}
+.text-end p {
+    background-color: #E0EAF0;
+    padding: 7px;
+    border-radius: 20px;
+    font-size: small;
+    font-weight: bold;
+}
+.section5 {
+    background-color: black;
+}
+.section5 .offset-md-1 img{
+    width: 130px;
+    background: none;
+}
+.container-footer ul .nav-item .nav-link {
+    color: white;
+}
