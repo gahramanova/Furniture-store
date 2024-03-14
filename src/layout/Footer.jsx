@@ -1,77 +1,79 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import facebook from "../assets/img/facebook.png"
+import pinterest from "../assets/img/pinterest.png"
+import linkedin from "../assets/img/pinterest.png"
+import twitter from "../assets/img/twitter.png"
+import logoLight from "../assets/img/logo-light.svg"
+import logoDark from "../assets/img/logo-black.svg"
 import { NavLink } from 'react-router-dom'
+import { ModeContext } from '../context/ModeContext'
+import googlePlay from "../assets/img/google-play.svg"
+import appStore from "../assets/img/app-store.svg"
 
 const Footer = () => {
+ const [mode] = useContext(ModeContext)
   return (
     <>
-     <section className='section section5'>
-      <nav className="navbar">
-        <div className="container">
-          <img src="https://woodmart.b-cdn.net/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-logo-white.svg"></img>
-          <div className="d-flex col-12 col-lg-4" role="search">
-            <h4>Subscribe us: 
-            <i class="fa-brands fa-facebook mx-2"></i>
-            <i class="fa-brands fa-x-twitter mx-2"></i>
-            <i class="fa-brands fa-pinterest mx-2"></i>
-            <i class="fa-brands fa-linkedin mx-2"></i>
-            </h4>
-            
-          </div>
-        </div>
-      </nav>
-     <div className="container container-footer">
-        <footer className="py-5">
-          <div className="row">
-            <div className="col-6 col-md-2 mb-3">
-              <h5>Useful Links</h5>
-              <ul className="nav flex-column">
-                <li className="nav-item mb-2" ><NavLink to={"/"} className="nav-link p-0 text-body-secondary">About us</NavLink></li>
-                <li className="nav-item mb-2"><NavLink to={"/contact"} className="nav-link p-0 text-body-secondary">Contact us</NavLink></li>
-                <li className="nav-item mb-2"><NavLink to={"/showrooms"} className="nav-link p-0 text-body-secondary">Showrooms</NavLink></li>
-                <li className="nav-item mb-2"><NavLink to={"/blog"} className="nav-link p-0 text-body-secondary">Blog</NavLink></li>
-                <li className="nav-item mb-2"><NavLink to={"/giftcards"} className="nav-link p-0 text-body-secondary">Gift Cards</NavLink></li>
-              </ul>
-            </div>
-            <div className="col-6 col-md-2 mb-3">
-              <h5>Categories</h5>
-              <ul className="nav flex-column">
-                <li className="nav-item mb-2"><NavLink to={"/categories"} className="nav-link p-0 text-body-secondary">Chair</NavLink></li>
-                <li className="nav-item mb-2"><NavLink to={"/categories"} className="nav-link p-0 text-body-secondary">Tables</NavLink></li>
-                <li className="nav-item mb-2"><NavLink to={"/categories"} className="nav-link p-0 text-body-secondary">Sofas</NavLink></li>
-                <li className="nav-item mb-2"><NavLink to={"/categories"} className="nav-link p-0 text-body-secondary">Armchairs</NavLink></li>
-                <li className="nav-item mb-2"><NavLink to={"/categories"} className="nav-link p-0 text-body-secondary">Beds</NavLink></li>
-              </ul>
-            </div>
-            <div className="col-6 col-md-2 mb-3">
-              <h5>Other Links</h5>
-              <ul className="nav flex-column">
-                <li className="nav-item mb-2"><NavLink to={"/"} className="nav-link p-0 text-body-secondary">Storage</NavLink></li>
-                <li className="nav-item mb-2"><NavLink to={"/"} className="nav-link p-0 text-body-secondary">Textiles</NavLink></li>
-                <li className="nav-item mb-2"><NavLink to={"/"} className="nav-link p-0 text-body-secondary">Toys</NavLink></li>
-                <li className="nav-item mb-2"><NavLink to={"/"} className="nav-link p-0 text-body-secondary">Lighting</NavLink></li>
-                <li className="nav-item mb-2"><NavLink to={"/"} className="nav-link p-0 text-body-secondary">Decor</NavLink></li>
-              </ul>
-            </div>
-            <div className="col-md-5 offset-md-1 mb-3">
-              <div>
-                <h5>Download App on Mobile:</h5>
-                <p>15% discount on your first purchase</p>
-                <div className="d-flex flex-column flex-sm-row w-100 gap-2">
-                  <img src="https://w7.pngwing.com/pngs/696/500/png-transparent-google-play-mobile-phones-google-search-google-text-logo-sign.png"></img>
-                  <img src="https://w7.pngwing.com/pngs/1015/380/png-transparent-app-store-logo-iphone-app-store-google-play-apple-app-store-electronics-text-logo.png"></img>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-            <p>©  2024 Created by Narmin. Luxury Furniture Store..</p>
-
-          </div>
-        </footer>
+   
+  <footer>
+  <div className="container-fluid">
+    <div className="row">
+      <div className='mb-4'><img className='logo' src={mode==="light"?logoLight:logoDark}></img></div>
+      <div className="col-6 col-md-2 mb-3">
+        <h5>Useful links</h5>
+        <ul className="nav flex-column">
+          <li className="nav-item mb-2"><NavLink to={"/about"} className="nav-link p-0">About us</NavLink></li>
+          <li className="nav-item mb-2"><NavLink to={"/contact"} className="nav-link p-0">Contact</NavLink></li>
+          <li className="nav-item mb-2"><NavLink to={"/showrooms"} className="nav-link p-0">Showrooms</NavLink></li>
+          <li className="nav-item mb-2"><NavLink to={"/blog"} className="nav-link p-0">Blog</NavLink></li>
+          <li className="nav-item mb-2"><NavLink to={"/giftcards"} className="nav-link p-0">Gift Cards</NavLink></li>
+        </ul>
       </div>
+      <div className="col-6 col-md-2 mb-3">
+        <h5>Categories</h5>
+        <ul className="nav flex-column">
+          <li className="nav-item mb-2"><NavLink to={"/categories"} className="nav-link p-0 ">Chair</NavLink></li>
+          <li className="nav-item mb-2"><NavLink to={"/categories"} className="nav-link p-0 ">Tables</NavLink></li>
+          <li className="nav-item mb-2"><NavLink to={"/categories"} className="nav-link p-0 ">Sofas</NavLink></li>
+          <li className="nav-item mb-2"><NavLink to={"/categories"} className="nav-link p-0 ">Armchairs</NavLink></li>
+          <li className="nav-item mb-2"><NavLink to={"/categories"} className="nav-link p-0 ">Beds</NavLink></li>
+        </ul>
+      </div>
+      <div className="col-6 col-md-2 mb-3">
+        <h5>Other links</h5>
+        <ul className="nav flex-column">
+          <li className="nav-item mb-2"><NavLink to={"/"} className="nav-link p-0">Home</NavLink></li>
+          <li className="nav-item mb-2"><NavLink to={"/"} className="nav-link p-0">Features</NavLink></li>
+          <li className="nav-item mb-2"><NavLink to={"/"} className="nav-link p-0 ">Pricing</NavLink></li>
+          <li className="nav-item mb-2"><NavLink to={"/faq"} className="nav-link p-0">FAQs</NavLink></li>
+          <li className="nav-item mb-2"><NavLink to={"/about"} className="nav-link p-0 ">About</NavLink></li>
+        </ul>
+      </div>
+      <div className="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5>Subscribe us</h5>
+          <div className="d-flex flex-column flex-sm-row w-100 gap-2">
+          <ul className="list-unstyled d-flex">
+            <li className=""><NavLink className="link-body-emphasis" href="#"><img src={facebook} style={{width: "24px", height:"24px"}}></img></NavLink></li>
+            <li className="ms-3"><NavLink className="link-body-emphasis" href="#"><img src={twitter} style={{width: "24px", height:"24px"}}></img></NavLink></li>
+            <li className="ms-3"><NavLink className="link-body-emphasis" href="#"><img src={pinterest} style={{width: "24px", height:"24px"}}></img></NavLink></li>
+            <li className="ms-3"><NavLink className="link-body-emphasis" href="#"><img src={linkedin} style={{width: "24px", height:"24px"}}></img></NavLink></li>
+        </ul>
+          </div>
+          <h5 className='text-bold'>Download App on Mobile.</h5>
+          <img src={googlePlay}></img>
+          <img className='mx-2' src={appStore}></img>
+        </form>
+      </div>
+    </div>
+    <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© 2024 Company, Inc. All rights reserved.</p>
+    </div>
+    </div>
+  </footer>
 
-     </section>
+
+
     </>
   )
 }

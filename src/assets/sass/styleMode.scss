@@ -1,0 +1,57 @@
+* {
+    font-family: "Urbanist", sans-serif;
+}
+
+.light {
+    background-color: white;
+    color: black;
+    footer {
+        background-color: black !important;
+        color: white !important;
+    }
+    footer .col-6 ul .nav-link {
+        color: white;
+    }
+    header .woodmart {
+        background-color: #FBFAF7 ;
+        color: black !important;
+        padding: 0 100px;
+    }
+    header .home ul li .nav-link {
+        background-color: #FBFAF7 ;
+        color: black !important;
+    }
+    .logo {
+        width: 210px;
+        height: 40px;
+    }
+
+}
+.dark {
+    background-color: black;
+    color: white;
+    footer {
+        background-color: white !important;
+        color: black !important;
+    }
+    footer .col-6 ul .nav-link {
+        color: black;
+    }
+    header .woodmart {
+        background-color: black !important;
+        color: white ;
+        padding: 0 100px;
+    }
+    header .home ul li .nav-link {
+        background-color: black ;
+        color: white !important;
+    }
+    .logo {
+        width: 210px;
+        height: 40px;
+    }
+    .home-section .container .card {
+        background-color: black;
+    }
+}
+

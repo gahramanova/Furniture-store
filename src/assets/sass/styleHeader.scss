@@ -1,0 +1,34 @@
+header .form-control {
+    border-radius: 30px;
+    margin-left: 7px;
+}
+@media (max-width: 980px) {
+    header .gift {
+        display: none;
+    } 
+    header .media {
+        display: none;
+    }
+    header {
+        position: relative;
+        .cart {
+            position: absolute;
+            display: inline-block;
+            margin-bottom: -30px;
+            margin-right: -150px;
+            
+        }
+        
+    }
+
+}
+.text-end .btn{
+    border-radius: 30px;
+}
+.paragraf .shipping {
+    background-color: #E0EAF0;
+    padding: 7px;
+    border-radius: 20px;
+    font-size: small;
+    font-weight: bold;
+}
