@@ -5,6 +5,8 @@ import "./assets/sass/styleMode.scss"
 import "./assets/sass/styleHeader.scss"
 import "./assets/sass/styleFooter.scss"
 import "./assets/sass/styleHome.scss"
+import "./assets/sass/styleAbout.scss"
+import "./assets/sass/styleContact.scss"
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
 import { ProductProvider } from './context/ProductContext.jsx'

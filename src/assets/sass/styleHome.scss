@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
 }
-.home-section .container .card {
+.home-section .container .card-home {
     border: none;
     position: relative;
    @include display;
@@ -25,7 +25,7 @@
         transition: color 0.4s ease, transform 0.4s ease;
     }
 }
-section .container .card:hover .card-img-top {
+section .container .card-home:hover .card-img-top {
     color: rgba(0, 0, 0, 0); 
     transform: scale(1.1);
 }

@@ -14,7 +14,19 @@ const Footer = () => {
  const [mode] = useContext(ModeContext)
   return (
     <>
-   
+    <section className="section1 mx-5 my-5">
+        <h4 className="fw-bold">Online store with a wide selection of furniture and decor</h4>
+        <p style={{ color: "#ccc" }}>
+          Furniture is an invariable attribute of any room. It is they who give it the right atmosphere, making the space cozy and comfortable, creating favorable conditions for p
+          roductive work or helping to relax after a hard day. More and more often, customers want to place an order in an online store, when you can sit down at the computer in your free time, arrange the furniture in the photo and calmly
+          buy the furniture you like. The online store has a large catalog of furniture: both home and office furniture are available
+        </p>
+
+        <h4 className="fw-bold mt-4">Furniture production is a modern form of art</h4>
+        <p style={{ color: "#ccc" }}>Furniture manufacturers, as well as manufacturers of other home goods, are full of amazing offers: we often come across both standard mass-produced products and unique creations – 
+        furniture from professional craftsmen, which will be appreciated by true connoisseurs of beauty. We have selected for you the best models from modern craftsmen who managed to ingeniously combine elegance, 
+        quality and practicality in each product unit. Our assortment includes products from proven companies. Who for many years of continuous joint work did not give reason to doubt their reliability and honesty. All of them guarantee the high quality of their products, excellent operational characteristics, attractive appearance of the products, a long period of use of the furniture, as well as safety.</p>
+      </section>
   <footer>
   <div className="container-fluid">
     <div className="row">

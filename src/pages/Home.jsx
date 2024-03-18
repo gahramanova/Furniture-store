@@ -117,7 +117,7 @@ const Home = () => {
           <div className="row row-cols-2 row-cols-md-5 g-4">
             <div className="col mb-3">
               <NavLink to={"/categories"}>
-                <div className="card">
+                <div className="card card-home">
                   <img src={chairs} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
                     <h5 className="card-title">Chairs</h5>
@@ -127,7 +127,7 @@ const Home = () => {
             </div>
             <div className="col mb-3">
               <NavLink to={"/categories"}>
-                <div className="card">
+                <div className="card card-home">
                   <img src={tables} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
                     <h5 className="card-title">Tables</h5>
@@ -137,7 +137,7 @@ const Home = () => {
             </div>
             <div className="col mb-3">
               <NavLink to={"/categories"}>
-                <div className="card">
+                <div className="card card-home">
                   <img src={sofas} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
                     <h5 className="card-title">Sofas</h5>
@@ -147,7 +147,7 @@ const Home = () => {
             </div>
             <div className="col mb-3">
               <NavLink to={"/categories"}>
-                <div className="card">
+                <div className="card card-home">
                   <img src={armchair} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
                     <h5 className="card-title">Armchairs</h5>
@@ -157,7 +157,7 @@ const Home = () => {
             </div>
             <div className="col mb-3">
               <NavLink to={"/categories"}>
-                <div className="card">
+                <div className="card card-home">
                   <img src={beds} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
                     <h5 className="card-title">Beds</h5>
@@ -167,7 +167,7 @@ const Home = () => {
             </div>
             <div className="col mb-3">
               <NavLink to={"/categories"}>
-                <div className="card">
+                <div className="card card-home">
                   <img src={storage} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
                     <h5 className="card-title">Storage</h5>
@@ -177,7 +177,7 @@ const Home = () => {
             </div>
             <div className="col mb-3">
               <NavLink to={"/categories"}>
-                <div className="card">
+                <div className="card card-home">
                   <img src={textiles} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
                     <h5 className="card-title">Textiles</h5>
@@ -187,7 +187,7 @@ const Home = () => {
             </div>
             <div className="col mb-3">
               <NavLink to={"/categories"}>
-                <div className="card">
+                <div className="card card-home">
                   <img src={lighting} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
                     <h5 className="card-title">Lighthing</h5>
@@ -197,7 +197,7 @@ const Home = () => {
             </div>
             <div className="col mb-3">
               <NavLink to={"/categories"}>
-                <div className="card">
+                <div className="card card-home">
                   <img src={toys} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
                     <h5 className="card-title">Toys</h5>
@@ -207,7 +207,7 @@ const Home = () => {
             </div>
             <div className="col mb-3">
               <NavLink to={"/categories"}>
-                <div className="card">
+                <div className="card card-home">
                   <img src={decor} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
                     <h5 className="card-title">Decor</h5>
@@ -400,7 +400,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="section8 mx-5 my-5">
+      {/* <section className="section8 mx-5 my-5">
         <h4 className="fw-bold">Online store with a wide selection of furniture and decor</h4>
         <p style={{ color: "#ccc" }}>
           Furniture is an invariable attribute of any room. It is they who give it the right atmosphere, making the space cozy and comfortable, creating favorable conditions for p
@@ -412,7 +412,7 @@ const Home = () => {
         <p style={{ color: "#ccc" }}>Furniture manufacturers, as well as manufacturers of other home goods, are full of amazing offers: we often come across both standard mass-produced products and unique creations – 
         furniture from professional craftsmen, which will be appreciated by true connoisseurs of beauty. We have selected for you the best models from modern craftsmen who managed to ingeniously combine elegance, 
         quality and practicality in each product unit. Our assortment includes products from proven companies. Who for many years of continuous joint work did not give reason to doubt their reliability and honesty. All of them guarantee the high quality of their products, excellent operational characteristics, attractive appearance of the products, a long period of use of the furniture, as well as safety.</p>
-      </section>
+      </section> */}
     </>
   )
 }

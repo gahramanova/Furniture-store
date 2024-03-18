@@ -32,7 +32,7 @@ const Header = () => {
                     <NavLink to={"/"} className="nav-link text-secondary" >Gift-Cards</NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink to={"/"} className="nav-link text-secondary" aria-current="page" href="#">Showroom</NavLink>
+                    <NavLink to={"/showrooms"} className="nav-link text-secondary" aria-current="page" href="#">Showroom</NavLink>
                   </li>
                   <li className="nav-item">
                     <NavLink to={"/about"} className="nav-link text-secondary" href="#">About us</NavLink>
@@ -44,7 +44,7 @@ const Header = () => {
                     <NavLink to={"/"} className="nav-link text-secondary" style={{ borderRight: "1px solid #a2a2a2" }}><FaPhoneAlt className='mx-1' />(+604 994 56 78)</NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink to={"/"} className="nav-link mx-3 " aria-current="page" href="#"><img src={expert}></img>
+                    <NavLink to={"/contact"} className="nav-link mx-3 " aria-current="page" href="#"><img src={expert}></img>
                       Contact with an expert</NavLink>
                   </li>
 
@@ -130,7 +130,7 @@ const Header = () => {
                     <li><NavLink to={"/about"} className="nav-link px-2 link-body-emphasis">About Us</NavLink></li>
                     <li><NavLink to={"/blog"} className="nav-link px-2 link-body-emphasis">Blog</NavLink></li>
                     <li><NavLink to={"/products"} className="nav-link px-2 link-body-emphasis">Products</NavLink></li>
-                    <li><NavLink to={"/shop"} className="nav-link px-2 link-body-emphasis">Shop</NavLink></li>
+                    <li><NavLink to={"/showrooms"} className="nav-link px-2 link-body-emphasis">Showrooms</NavLink></li>
                     <li><NavLink to={"/contact"} className="nav-link px-2 link-body-emphasis">Contact</NavLink></li>
 
                   </ul>
@@ -141,28 +141,6 @@ const Header = () => {
                 </div>
               </div>
             </nav>
-
-
-
-
-
-
-            {/* <div className="d-flex justify-content-between mx-0 p-0">
-                <div>  <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><NavLink to={"/"} className="nav-link px-2 link-body-emphasis">Home</NavLink></li>
-                    <li><NavLink to={"/about"} className="nav-link px-2 link-body-emphasis">About Us</NavLink></li>
-                    <li><NavLink to={"/categories"} className="nav-link px-2 link-body-emphasis">Categories</NavLink></li>
-                    <li><NavLink to={"/shop"} className="nav-link px-2 link-body-emphasis">Shop</NavLink></li>
-                    <li><NavLink to={"/blog"} className="nav-link px-2 link-body-emphasis">Blog</NavLink></li>
-                    <li><NavLink to={"/products"} className="nav-link px-2 link-body-emphasis">Products</NavLink></li>
-                    <li><NavLink to={"/contact"} className="nav-link px-2 link-body-emphasis">Contact</NavLink></li>
-
-                  </ul></div>
-                
-                  <div className=" text-end">
-                  <p className='text-end'>Free shipping for all order $1.300</p>
-                  </div>
-            </div> */}
           </div>
 
         </div>
