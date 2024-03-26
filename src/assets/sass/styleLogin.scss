@@ -1,4 +1,4 @@
-.showrooms-main {
+.login-main {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -19,23 +19,18 @@
     }
 
 }
-
-.section-showroom-1,
-.section-showroom-2 {
-    ul li {
-        list-style: none;
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
-    }
-    button {
-        padding: 10px 20px;
-        background-color: #F59A57;
-        color: white;
-        border: none;
-        border-radius: 30px;
-    }
+.mb-3 .form-control {
+    border-radius: 30px;
+}
+form .text {
+    text-decoration: none;
+    color: #F59A57;
+}
+.submit {
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    background-color: #F59A57;
+    border-radius: 30px;
+    color: white;
 }

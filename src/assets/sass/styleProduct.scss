@@ -1,4 +1,4 @@
-.showrooms-main {
+.section-product {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -7,7 +7,6 @@
     background-image: url("../img/about-coverphoto.jpg");
     background-position: center;
     background-size: cover;
-
     .content {
         display: flex;
         align-items: center;
@@ -18,24 +17,4 @@
 
     }
 
-}
-
-.section-showroom-1,
-.section-showroom-2 {
-    ul li {
-        list-style: none;
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
-    }
-    button {
-        padding: 10px 20px;
-        background-color: #F59A57;
-        color: white;
-        border: none;
-        border-radius: 30px;
-    }
 }

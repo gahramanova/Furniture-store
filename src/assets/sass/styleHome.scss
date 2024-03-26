@@ -25,7 +25,7 @@
         transition: color 0.4s ease, transform 0.4s ease;
     }
 }
-section .container .card-home:hover .card-img-top {
+.section1 .container .card-home:hover .card-img-top {
     color: rgba(0, 0, 0, 0); 
     transform: scale(1.1);
 }
@@ -107,6 +107,7 @@ section .container .card-home:hover .card-img-top {
 }
 
 @media (max-width: 980px) {
+    
     .section5 .lazy {
         display: none;
     }
@@ -117,34 +118,31 @@ section .container .card-home:hover .card-img-top {
 }
 
 
-.section6 .main {
-    position: relative;
-    display: flex;
-    align-items: center;
+.section6 {
     .video-photo {
-        width: 660px;
-        background-position: center !important;
-        background-size: cover !important;
-        border-radius: 200px !important;
+        border-radius: 200px;
     }
-    .content {
-        position: absolute;
-        left: 250px;
-        color: white;
-        padding-top: 100px !important;
-        padding-bottom: 100px !important;
-        .text-title {
-          display: flex;
-          align-items: center;
+    .photo {
+        position: relative;
+        @include display;
+        .content {
+            position: absolute;
         }
-        .player {
-            display: flex;
-            align-items: center;
-            border: 2px solid #ccc;
-            padding: 20px 40px;
-            width: 100%;
-            border-radius: 50%;
+        .text-title {
+            @include display;
+            color: white;
+        }
+    }
+    
+}
+
+@media (max-width: 980px) {
+    .section1 {
+        margin-top: 10px;
+        .slider {
+           
         }
     }
 
 }
+

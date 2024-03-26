@@ -3,7 +3,7 @@
 }
 
 .light {
-    background-color: white;
+    background-color: #F3F2F0 !important;
     color: black;
     footer {
         background-color: black !important;
@@ -17,13 +17,22 @@
         color: black !important;
         padding: 0 100px;
     }
-    header .home ul li .nav-link {
+    .home-section .container .card {
+        background-color: #F3F2F0;
+    }
+    .about-section2 .container .card {
+        background-color: #F3F2F0;
+    }
+    header nav ul li .nav-link {
         background-color: #FBFAF7 ;
         color: black !important;
     }
     .logo {
         width: 210px;
         height: 40px;
+    }
+    .products-details {
+        background-color: #F3F2F0 !important;
     }
 
 }
@@ -42,7 +51,7 @@
         color: white ;
         padding: 0 100px;
     }
-    header .home ul li .nav-link {
+    header nav ul li .nav-link {
         background-color: black ;
         color: white !important;
     }
@@ -57,4 +66,13 @@
         background-color: black;
     }
 }
-
+@media (max-width: 980px) {
+    .dark {
+        header{
+            .navbar-collapse {
+                background-color: white !important;
+                color: white !important;
+            }
+        }
+    }
+}

@@ -1,13 +1,20 @@
 import React from 'react'
 import contactImageOne from "../assets/img/contact-image-1.png"
 import contactImageTwo from "../assets/img/contact-image-2.png"
+import i18n from '../i18n/i18next';
+import { useTranslation } from 'react-i18next';
+
 const Contact = () => {
+  const toggleLang =(lang)=> {
+    i18n.changeLanguage(lang)
+  }
+  const {t} = useTranslation()
   return (
     <>
       <section>
       <div className='contact-main'>
       <div className='content'>
-            <h1 className='card-title fw-bold display-4'>Contact Us</h1> 
+          <h1 className='card-title fw-bold display-4'>{t("contact.0")}</h1> 
              
       </div>
       </div>
@@ -20,9 +27,9 @@ const Contact = () => {
               <div><img src={contactImageOne} style={{width: "100%"}}/></div>
               <div className='d-flex flex-column text-area justify-content-center'>
               <ul>
-                  <li><h2 className='fw-bold'>Milano</h2></li>
+                  <li><h2 className='fw-bold'>{t("contact.1")}</h2></li>
                   <li><h6 className='fw-bold'>Piazzale Ferrara Via Mincio, 4, 20139</h6></li>
-                  <li><p className='fw-bold'>Monday – Friday 09:00 – 17:00</p></li>
+                  <li><p className='fw-bold'>{t("contact.2")} 09:00 – 17:00</p></li>
                   <li><a className='fw-bold'>xtemos@gmail.com</a></li>
                   <li><a className='fw-bold'>(686) 492-1044</a></li>
                 
@@ -35,9 +42,9 @@ const Contact = () => {
               <div><img src={contactImageTwo} style={{width: "100%"}}/></div>
               <div className='d-flex flex-column text-area justify-content-center'>
                 <ul>
-                  <li><h2 className='fw-bold'>Milano</h2></li>
+                  <li><h2 className='fw-bold'>{t("contact.3")}</h2></li>
                   <li><h6 className='fw-bold'>Piazzale Ferrara Via Mincio, 4, 20139</h6></li>
-                  <li><p className='fw-bold'>Monday – Friday 09:00 – 17:00</p></li>
+                  <li><p className='fw-bold'>{t("contact.4")} 09:00 – 17:00</p></li>
                   <li><a className='fw-bold'>xtemos@gmail.com</a></li>
                   <li><a className='fw-bold'>(686) 492-1044</a></li>
                 
@@ -52,29 +59,29 @@ const Contact = () => {
       <div className='container my-4'>
         <div className='row'>
           <div className='col-12 col-sm-6'>
-          <h3 className='fw-bold'>Contact with an expert </h3>
+          <h3 className='fw-bold'>{t("contact.5")}</h3>
             <div className="input-group mb-3">
-              <input type="text" className="form-control" placeholder="Name"/>
+              <input type="text" className="form-control" placeholder={t("contact.6")}/>
             </div>
             <div className="input-group mb-3">
-              <input type="text" className="form-control" placeholder="Email"/>
+              <input type="text" className="form-control" placeholder={t("contact.7")}/>
             </div>
             <div className="input-group mb-3">
-        <textarea cols="40" rows="10"  placeholder="Write your message..." name="your-message" style={{width: "766px", height: "213px"}}></textarea>
+        <textarea cols="40" rows="10"  placeholder={t("contact.8")} name="your-message" style={{width: "766px", height: "213px"}}></textarea>
             </div>
             <div className="input-group mb-3">
-              <button>Send message</button>
+              <button>{t("contact.9")}</button>
            </div>
           </div>
           <div className='col-12 col-sm-6 '>
-          <h3 className='fw-bold'>Frequently asked questions </h3>
+          <h3 className='fw-bold'>{t("contact.10")} </h3>
             <div className='questions'>
               <ul className='p-0'>
-                <li className='mb-5 fw-bold'>My order hasn't arrived yet. Where is it?</li>
-                <li className='mb-5 fw-bold'>Do you deliver on public holidays?</li>
-                <li className='mb-5 fw-bold'>Do you deliver to my postcode?</li>
-                <li className='mb-5 fw-bold'>Is next day delivery available on all orders?</li>
-                <li className='mb-5 fw-bold'>Do I need to be there to sign for delivery?</li>
+                <li className='mb-5 fw-bold'>{t("contact.11")}</li>
+                <li className='mb-5 fw-bold'>{t("contact.12")}</li>
+                <li className='mb-5 fw-bold'>{t("contact.13")}</li>
+                <li className='mb-5 fw-bold'>{t("contact.14")}</li>
+                <li className='mb-5 fw-bold'>{t("contact.15")}</li>
               </ul>
             </div>
           </div>

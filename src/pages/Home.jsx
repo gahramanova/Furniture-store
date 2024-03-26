@@ -31,19 +31,18 @@ import kettal from "../assets/img/kettal.jpg"
 import lladro from "../assets/img/lladro.jpg"
 import poliform from "../assets/img/poliform.jpg"
 import lazy from "../assets/img/lazy.webp"
-import gridOne from "../assets/img/grid-one.webp"
-import gridTwo from "../assets/img/grid-two.webp"
 import furniture from "../assets/img/furniture-choosing-rules.webp"
 import videoPhoto from "../assets/img/video-photo.jpg"
-import { CiPlay1 } from "react-icons/ci";
+import i18n from '../i18n/i18next';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
   const settings = {
     dots: false,
     infinite: true,
     speed: 900,
-    autoplay: false,
-    autoplaySpeed: 900,
+    autoplay: true,
+    autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
@@ -54,22 +53,26 @@ const Home = () => {
   };
 
   const [productData] = useContext(ProductContext)
+  const toggleLang =(lang)=> {
+    i18n.changeLanguage(lang)
+  }
+  const {t} = useTranslation()
   return (
     <>
-      <section>
+      <section className="section1">
         <Slider {...settings}>
           <div className="slider">
             <img src={sliderOne} style={{ objectFit: "contain", height: "100%" }} />
             <div className="content">
               <div className="first d-flex align-items-center">
                 <img className="mx-2" style={{ width: "80px", height: "80px" }} src={slider1} />
-                <h5 style={{ color: "#414240" }}>Discover the more products<br /> in the decor category</h5>
+                <h5 style={{ color: "#414240" }}> {t("home-slider.0")}<br /></h5>
               </div>
               <div className="second">
-                <h1 className="fw-bold" style={{ color: "#414240" }}>Terracota Vase<br /> by Courtney Hanrey</h1>
+                <h1 className="fw-bold" style={{ color: "#414240" }}>{t("home-slider.1")}</h1>
               </div>
               <div className="third">
-                <button className="btn fw-bold"> Shop now</button>
+                <button className="btn fw-bold"> {t("home-slider.2")}</button>
 
               </div>
             </div>
@@ -79,13 +82,13 @@ const Home = () => {
             <div className="content">
               <div className="first d-flex align-items-center">
                 <img className="mx-2" style={{ width: "80px", height: "80px" }} src={slider2} />
-                <h5 style={{ color: "#414240" }}>Discover the more products<br /> in the chair category</h5>
+                <h5 style={{ color: "#414240" }}>{t("home-slider.3")}</h5>
               </div>
               <div className="second">
-                <h1 className="fw-bold" style={{ color: "#414240" }}>Upholstered chair<br /> by Esther Howard</h1>
+                <h1 className="fw-bold" style={{ color: "#414240" }}>{t("home-slider.4")}</h1>
               </div>
               <div className="third">
-                <button className="btn fw-bold"> Shop now</button>
+                <button className="btn fw-bold"> {t("home-slider.2")}</button>
 
               </div>
             </div>
@@ -95,13 +98,13 @@ const Home = () => {
             <div className="content">
               <div className="first d-flex align-items-center">
                 <img className="mx-2" style={{ width: "80px", height: "80px" }} src={slider3} />
-                <h5 style={{ color: "#414240" }}>Discover the more products<br /> in the sofas category</h5>
+                <h5 style={{ color: "#414240" }}>{t("home-slider.5")}</h5>
               </div>
               <div className="second">
-                <h1 className="fw-bold" style={{ color: "#414240" }}>Sectional fabric sofa<br /> by Ramon Esteve</h1>
+                <h1 className="fw-bold" style={{ color: "#414240" }}>{t("home-slider.6")}</h1>
               </div>
               <div className="third">
-                <button className="btn fw-bold"> Shop now</button>
+                <button className="btn fw-bold"> {t("home-slider.2")}</button>
 
               </div>
             </div>
@@ -110,107 +113,107 @@ const Home = () => {
       </section>
 
       {/* Our Categories ==================================================================================================*/}
-      <section className="my-4 mx-4 home-section">
-        <h2 className="fw-bold">Our Categories</h2>
-        <p>Lots of new products and product collections</p>
+      <section className="my-5 mx-5 home-section">
+        <h2 className="fw-bold">{t("home-section-one.0")}</h2>
+        <p>{t("home-section-one.1")}</p>
         <div className="container">
           <div className="row row-cols-2 row-cols-md-5 g-4">
             <div className="col mb-3">
-              <NavLink to={"/categories"}>
+              <NavLink to={"/products"}>
                 <div className="card card-home">
                   <img src={chairs} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
-                    <h5 className="card-title">Chairs</h5>
+                    <h5 className="card-title">{t("home-section-one.2")}</h5>
                   </div>
                 </div>
               </NavLink>
             </div>
             <div className="col mb-3">
-              <NavLink to={"/categories"}>
+              <NavLink to={"/products"}>
                 <div className="card card-home">
                   <img src={tables} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
-                    <h5 className="card-title">Tables</h5>
+                    <h5 className="card-title">{t("home-section-one.3")}</h5>
                   </div>
                 </div>
               </NavLink>
             </div>
             <div className="col mb-3">
-              <NavLink to={"/categories"}>
+              <NavLink to={"/products"}>
                 <div className="card card-home">
                   <img src={sofas} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
-                    <h5 className="card-title">Sofas</h5>
+                    <h5 className="card-title">{t("home-section-one.4")}</h5>
                   </div>
                 </div>
               </NavLink>
             </div>
             <div className="col mb-3">
-              <NavLink to={"/categories"}>
+              <NavLink to={"/products"}>
                 <div className="card card-home">
                   <img src={armchair} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
-                    <h5 className="card-title">Armchairs</h5>
+                    <h5 className="card-title">{t("home-section-one.5")}</h5>
                   </div>
                 </div>
               </NavLink>
             </div>
             <div className="col mb-3">
-              <NavLink to={"/categories"}>
+              <NavLink to={"/products"}>
                 <div className="card card-home">
                   <img src={beds} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
-                    <h5 className="card-title">Beds</h5>
+                    <h5 className="card-title">{t("home-section-one.6")}</h5>
                   </div>
                 </div>
               </NavLink>
             </div>
             <div className="col mb-3">
-              <NavLink to={"/categories"}>
+              <NavLink to={"/products"}>
                 <div className="card card-home">
                   <img src={storage} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
-                    <h5 className="card-title">Storage</h5>
+                    <h5 className="card-title">{t("home-section-one.7")}</h5>
                   </div>
                 </div>
               </NavLink>
             </div>
             <div className="col mb-3">
-              <NavLink to={"/categories"}>
+              <NavLink to={"/products"}>
                 <div className="card card-home">
                   <img src={textiles} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
-                    <h5 className="card-title">Textiles</h5>
+                    <h5 className="card-title">{t("home-section-one.8")}</h5>
                   </div>
                 </div>
               </NavLink>
             </div>
             <div className="col mb-3">
-              <NavLink to={"/categories"}>
+              <NavLink to={"/products"}>
                 <div className="card card-home">
                   <img src={lighting} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
-                    <h5 className="card-title">Lighthing</h5>
+                    <h5 className="card-title">{t("home-section-one.9")}</h5>
                   </div>
                 </div>
               </NavLink>
             </div>
             <div className="col mb-3">
-              <NavLink to={"/categories"}>
+              <NavLink to={"/products"}>
                 <div className="card card-home">
                   <img src={toys} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
-                    <h5 className="card-title">Toys</h5>
+                    <h5 className="card-title">{t("home-section-one.10")}</h5>
                   </div>
                 </div>
               </NavLink>
             </div>
             <div className="col mb-3">
-              <NavLink to={"/categories"}>
+              <NavLink to={"/products"}>
                 <div className="card card-home">
                   <img src={decor} className="card-img-top" alt="Card image cap" />
                   <div className="card-body">
-                    <h5 className="card-title">Decor</h5>
+                    <h5 className="card-title">{t("home-section-one.11")}</h5>
                   </div>
                 </div>
               </NavLink>
@@ -220,14 +223,14 @@ const Home = () => {
       </section>
 
       <section className="my-5 mx-5 section2">
-        <h2 className="fw-bold">Weekly Bestsellers</h2>
+        <h2 className="fw-bold">{t("home-section-one.12")}</h2>
         <div className='container my-5'>
           <div className='row row-cols-2 row-cols-md-5 g-4'>
             {productData.slice(0, 10).map(item => (
               <SingleHomeProducts
                 id={item.id}
                 title={item.title}
-                img={item.img}
+                img1={item.img[0]}
                 price={item.price}
                 category={item.category}
                 rating={item.rating}
@@ -238,7 +241,7 @@ const Home = () => {
       </section>
 
       <section className="section3 my-5 mx-5">
-        <h2 className="fw-bold">Shopping by Brands</h2>
+        <h2 className="fw-bold">{t("home-section-one.14")}</h2>
         <div className="container my-5">
           <div className="row row-cols-1 row-cols-md-5 g-4">
             <div className="col col-mb-3">
@@ -315,23 +318,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="section4 mt-3">
-      <div className="text-center">
-      <h2 className="fw-bold">Products Collection</h2>
-      <p>Explore product collections from our vendors</p>
-      </div>
-      <div class="parent">
-          <div style={{backgroundColor: "green"}} class="div1"></div>
-          <div style={{backgroundColor: "red"}} class="div2"> </div>
-          <div style={{backgroundColor: "purple"}} class="div3"> </div>
-          <div style={{backgroundColor: "orange"}} class="div4"> </div>
-          <div style={{backgroundColor: "blue"}} class="div5"> </div>
-      </div>
-    </section>
-
-      <section className="section5 mx-5 my-5">
-        <h2 className="fw-bold">Furniture collection of the week</h2>
-        <p style={{ color: "#ccc" }}>The most popular products from the collection</p>
+     <section className="section5 mx-5 my-5">
+        <h2 className="fw-bold">{t("home-section-one.15")}</h2>
+        <p style={{ color: "#ccc" }}>{t("home-section-one.16")}</p>
         <div className="container d-flex align-items-lg-end">
           <div className="col-sm-6 col-md-8 col-lg-8 mx-4">
             <div className='row g-4' style={{ order: 1 }}>
@@ -339,7 +328,7 @@ const Home = () => {
                 <SingleHomeProducts
                   id={item.id}
                   title={item.title}
-                  img={item.img}
+                  img1={item.img[0]}
                   price={item.price}
                   category={item.category}
                   rating={item.rating}
@@ -348,7 +337,7 @@ const Home = () => {
             </div>
           </div>
           <div className="col-sm-6 col-md-5 col-lg-4">
-            <img className="lazy" src={lazy} style={{ width: "420px", height: "540px", borderRadius: "15px", order: "2" }} />
+            <img className="lazy" src={lazy} style={{ width: "100%", height: "540px", borderRadius: "15px", order: "2" }} />
           </div>
         </div>
       </section>
@@ -356,42 +345,31 @@ const Home = () => {
 
 
       <section className="section6 mx-5 my-5">
-        <h2 className="fw-bold">Rules for choosing furniture</h2>
-        <div className="row">
-          <div className="d-flex">
-            <div className="col-12 col-sm-4 col-lg-5">
-              <img src={furniture} style={{ width: "100%" }} />
+      <h2 className="fw-bold">{t("home-section-one.17")}</h2>
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-5 d-flex flex-column">
+              <img src={furniture} style={{width: "100%"}}/>
             </div>
-            <div className="col-12 col-sm-8 col-lg-7 d-flex flex-column mx-4">
-              <div className="col-sm-8 " >
-                <h5 className="fw-bold">Whether living on your own or with a family, your living room is an important space.</h5>
-                <p style={{ color: "#ccc" }}>This room is where your family spends time together, and it is the room most of your guests will spend the majority of their time in.
-                  Choosing furniture that creates a pleasant, welcoming appearance while holding
-                  up against the wear and tear of everyday life is the key in getting this space to work for your needs.</p>
-                <ul>
-                  <li style={{ color: "#ccc" }}>Choose items in a single color scheme and style</li>
-                  <li style={{ color: "#ccc" }}>Consider the area of the room</li>
-                  <li style={{ color: "#ccc" }}>Do not buy unnecessary pieces of furniture</li>
-                </ul>
-              </div>
-              <div className="col-sm-4">
-                <div className="main">
-                  <img className="video-photo" src={videoPhoto} style={{ objectFit: "contain", height: "300px" }} />
-                  <div className="content">
-                    <p>How to choose furniture</p>
-                    <h3 className="text-title">SØLREM furniture collection</h3>
-                    {/* <div className="player align-items-center">
-                  <CiPlay1 />
-                    </div> */}
-                  </div>
+            <div className="col-sm-12 col-md-7">
+                    <h5 className="fw-bold">{t("home-section-one.18")}</h5>
+                    <p style={{ color: "#727272" }}>{t("home-section-one.19")}</p>
+                    <ul>
+                      <li style={{ color: "#727272" }}>{t("home-section-one.20")}</li>
+                      <li style={{ color: "#727272" }}>{t("home-section-one.21")}</li>
+                      <li style={{ color: "#727272" }}>{t("home-section-one.22")}</li>
+                    </ul>
+                    <div className="photo d-flex">
+                    <img className="video-photo" src={videoPhoto} style={{ width: "100%" }} />
+                      <div className="content">
+                        <h6 className="text-title">{t("home-section-one.23")}</h6>
+                        <h3 className="text-title">{t("home-section-one.24")}</h3>
+                      </div>
+                    </div>
                 </div>
-              </div>
-            </div>
           </div>
         </div>
-
-
-      </section>
+</section>
 
       <section className="section7 my-5 mx-5" style={{ height: "50vh" }}>
         <h2 className="fw-bold">Lastest articles</h2>

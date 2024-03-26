@@ -11,13 +11,17 @@ header .form-control {
     }
     header {
         position: relative;
+        .text-end {
+            margin-right: -150px;
+            margin-bottom: -40px;
+        }
         .cart {
             position: absolute;
-            display: inline-block;
-            margin-bottom: -30px;
-            margin-right: -150px;
-            
         }
+    .navbar-collapse {
+        margin-top: 10px;
+        
+    }
         
     }
 
